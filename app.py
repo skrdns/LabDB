@@ -4,7 +4,7 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # --- Параметри підключення до MongoDB ---
-uri = "mongodb+srv://sikora:20050411@db1.gyaftca.mongodb.net/?retryWrites=true&w=majority&appName=DB1&tls=true"
+uri = "mongodb+srv://sikora:20050411@db1.gyaftca.mongodb.net/?retryWrites=true&w=majority&tls=true"
 
 client = MongoClient(uri, tls=True)
 db = client.mydatabase  # Замініть на назву вашої бази даних
