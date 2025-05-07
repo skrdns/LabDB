@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтерфейс MongoDB</title>
+</head>
+<body>
+    <h1>Вставка даних у MongoDB</h1>
+    <form method="post">
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="age">Вік:</label>
+        <input type="text" id="age" name="age" required><br><br>
+        <input type="submit" value="Вставити дані">
+    </form>
+
+    <h2>Дані з MongoDB:</h2>
+    <ul>
+        {% for doc in documents %}
+            <li>Ім'я: {{ doc['name'] }}, Вік: {{ doc['age'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
