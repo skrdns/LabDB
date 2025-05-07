@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # --- Параметри підключення до MongoDB ---
 uri = "mongodb+srv://sikora:20050411@db1.gyaftca.mongodb.net/?retryWrites=true&w=majority&appName=DB1"
-client = MongoClient(uri)
+client = MongoClient(uri, tls=True)
 db = client.mydatabase  # Замініть на назву вашої бази даних
 collection = db.mycollection  # Замініть на назву вашої колекції
 
